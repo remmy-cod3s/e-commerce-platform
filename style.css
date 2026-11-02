@@ -97,7 +97,7 @@ body{
     font-size: 15px;
 }
 
-.navbar-bottom{
+.navbar-bottom {
     background-color: #2b7a4b;
     justify-content: space-between;
     padding: 11px 20px;
@@ -105,11 +105,7 @@ body{
     display: flex;
     align-items: center;
     color: white;
-    position: fixed;
-    top: 1;
-    width: 100%;
 }
-
 .white-outline{
     border-radius: 20px;
     padding: 8px 10px;
@@ -411,3 +407,72 @@ body{
     padding: 8px 20px;
 }
 
+.pop-up{
+    display: flex;
+    border: 3px solid #f9fafb;
+    border-radius: 20px;
+    position:fixed;
+    bottom: 20px;
+    right: 30%;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.pop-up.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.header{
+    margin-bottom: 20px;
+    justify-content: space-between;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.product{
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+    display: flex;
+}
+
+.the-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding:  5px 150px;
+    border-radius: 30px;
+    border: 1px solid #2b7a4b;
+    background-color: #2b7a4b;
+}
+
+
+.the-link a{
+    text-decoration: none;
+    color: white;
+}
+.header h2{
+    color: #2b7a4b;
+    font-size: 20px;
+}
+
+.product .product-price{
+    color: #2b7a4b;
+    font-size: 16px;
+}
+
+.product img{
+    border-radius: 10px;
+    border: 1px solid grey;
+    padding: 15px;
+}
