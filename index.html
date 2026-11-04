@@ -125,7 +125,7 @@
                     <h3 class="blue-heading">Amartem Forte</h3>
                     <p class="description">Amatem soft Gel is An Arteminisin-Based Combination Therapy (ACT....</p>
                     <h3 class="price">₦4,500.00 </h3>
-                    <button class="cart1" data-id="0">🛒 Add to Cart</button>
+                    <button class="cart" data-id="0" onclick="Showpopup()">🛒 Add to Cart</button>
                 </li>
                 <li class="item">
                     <div class="image-content">
@@ -135,7 +135,7 @@
                     <h3 class="blue-heading">Ginger beauty</h3>
                     <p class="description">Ginger is A revolution in Skin Science</p>
                     <h3 class="price">₦50,000.00 </h3>
-                    <button class="cart" data-id="1">🛒 Add to Cart</button>
+                    <button class="cart" onclick="Showpopup()"data-id="1">🛒 Add to Cart</button>
                 </li>
                 <li class="item">
                     <div class="image-content">
@@ -145,7 +145,7 @@
                     <h3 class="blue-heading">Meconerv Forte Caps</h3>
                     <p class="description">Meconerv Forte Caps is Used Basically To prevent and Treat...</p>
                     <h3 class="price">₦4,500.00 </h3>
-                    <button class="cart" data-id="2">🛒 Add to Cart</button>
+                    <button class="cart" onclick="Showpopup()" data-id="2">🛒 Add to Cart</button>
                 </li>
                 <li class="item">
                     <div class="image-content">
@@ -155,7 +155,7 @@
                     <h3 class="blue-heading">Pythrocin Azithromycin 500mg</h3>
                     <p class="description">Azithromycin is Used in The Treatment Of Bacterial Infections</p>
                     <h3 class="price">₦1,450.00 </h3>
-                    <button class="cart" data-id="3">🛒 Add to Cart</button></li>
+                    <button class="cart" onclick="Showpopup()" data-id="3">🛒 Add to Cart</button></li>
                 <li class="item">
                     <div class="image-content">
                         <img src="img/placeholder.webp" alt="">
@@ -164,7 +164,7 @@
                     <h3 class="blue-heading">Astyfer Capsules</h3>
                     <p class="description">A supplement With Iron, Amino Acids And Vitamin B Complex To..</p>
                     <h3 class="price">₦2,600.00 </h3>
-                    <button class="cart" data-id="4">🛒 Add to Cart</button></li>
+                    <button class="cart" onclick="Showpopup()" data-id="4">🛒 Add to Cart</button></li>
                 <li class="item">
                     <div class="image-content">
                         <img src="img/placeholder.webp" alt="">
@@ -173,7 +173,7 @@
                     <h3 class="blue-heading">Lisinopril 5mg (Pharmamax)</h3>
                     <p class="description">Lisinopril is Used to Treat High Blood Pressure (Hypertension) in....</p>
                     <h3 class="price">₦650.00 </h3>
-                    <button class="cart" data-id="5">🛒 Add to Cart</button>
+                    <button class="cart" onclick="Showpopup()" data-id="5">🛒 Add to Cart</button>
                 </li>
             </ol>
         </section>
@@ -181,7 +181,7 @@
         <div class="pop-up">
             <section class="header">
             <h2>🛒 Added to cart</h2>
-            <p id="close-btn"> X </p>
+            <button id="close-btn" onclick="closepopup()"> X </button>
             </section>
             <section class="product">
                 <img src="img/cart.png">
