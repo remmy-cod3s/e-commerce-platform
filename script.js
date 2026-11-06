@@ -1,8 +1,17 @@
 let popup = document.querySelector(".pop-up");
 
-function Showpopup(){
+
+function Showpopup(button){
+  console.log(button);
   popup.classList.add("Showpopup");
-};
+  const elementId = button.getAttribute('data-id');
+
+
+  fetch(`add.php?id=${elementId}`, {
+    method: 'GET',
+})
+.then(response => response.json())
+.then(data => { console.log(data); })}
 
 function closepopup(){
   popup.classList.remove("Showpopup");
