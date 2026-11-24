@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +30,7 @@
                 <li><a href="#">🔥Top Bundles</a></li>
                 <li><a href="#"><img src="img/profile.png">Account</a></li>
                 <li><a href="#"><img src="img/telephone.png"></a></li>
-                <li><a href="#"><img src="img/cart.png">Cart</a></li>
+                <li><a href="#"><span class="cart-icon"><img src="img/cart.png"><span class="cart-badge" id="cart-badge"><?php echo isset($_SESSION['Cart']) ? count($_SESSION['Cart']) : 0; ?></span></span>Cart</a></li>
             </ul>
         </div>
         <div class="container navbar-bottom-desktop">
@@ -180,13 +184,15 @@
 
         <div class="pop-up">
             <section class="header">
-            <h2>🛒 Added to cart</h2>
-            <button id="close-btn" onclick="closepopup()"> X </button>
+                <h2>🛒 Added to cart</h2>
+                <button id="close-btn" onclick="closepopup()"> X </button>
             </section>
             <section class="product">
-                <img src="img/cart.png">
-                <p id="Product-name">product name</p>
-                <p class="product-price">₦ product price</p>
+                <img src="img/cart.png" alt="Product Image">
+                <div class="product-text">
+                    <p id="Product-name">Product name</p>
+                    <p class="product-price"></p>
+                </div>
             </section>
             <section class="the-link">
                 <a href="#">🛒 Go to Cart <span id="item-count">count items</span></a>
@@ -194,6 +200,6 @@
             </div>
     </div>
     
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>

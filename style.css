@@ -543,8 +543,11 @@ body{
     align-items: center;
     margin-bottom: 20px;
     gap: 20px;
+    height: 100px;
+    width: 100%;
     display: flex;
 }
+
 
 .the-link{
     display: flex;
@@ -572,10 +575,24 @@ body{
     font-size: 16px;
 }
 
+.product-text{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .product img{
     border-radius: 10px;
     border: 1px solid grey;
-    padding: 15px;
+    padding: 5px;
+    height: 80px;
+    width: 80px;
+    display: block;
+    max-width: 120px;
+    object-fit: contain;
+    background-color: white;
+    flex-shrink: 0;
 }
 
 .med-gallery button{
@@ -596,4 +613,23 @@ body{
     cursor: pointer;
     outline: none;
     border: none;
+}
+
+.cart-icon{
+    position: relative;
+}
+
+.cart-badge{
+    position: absolute;
+    display: flex;
+    top: -5px;
+    right: -5px;
+    background-color: #c8196f;
+    color: white;
+    font-size: 10px;
+    border-radius: 50%;
+    height: 14px;
+    justify-content: center;
+    align-items: center;
+    width: 14px;
 }

@@ -1,18 +1,29 @@
 let popup = document.querySelector(".pop-up");
+const badge = document.getElementById("cart-badge");
+
 
 
 function Showpopup(button){
-  console.log(button);
-  popup.classList.add("Showpopup");
-  const elementId = button.getAttribute('data-id');
+    let popup = document.querySelector(".pop-up");
+    popup.classList.add("Showpopup");
 
+    const elementId = button.getAttribute('data-id');
 
-  fetch(`add.php?id=${elementId}`, {
-    method: 'GET',
-})
-.then(response => response.json())
-.then(data => { console.log(data); })}
-
+    fetch(`add.php?id=${elementId}`)
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === "success") {
+            document.querySelector('.product img').src = data.product_image;
+            document.getElementById('Product-name').innerText = data.product_name;
+            document.querySelector('.product-price').innerText = '₦' + Number(data.product_price).toLocaleString();
+            document.getElementById('item-count').innerText = data.cart_count + ' items';
+            badge.textContent =  data.cart_count
+        }
+    })
+    .catch(error => {
+        console.error("Error updating HTML:", error);
+    });
+}
 function closepopup(){
   popup.classList.remove("Showpopup");
 }
