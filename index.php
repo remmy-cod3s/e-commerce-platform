@@ -195,7 +195,7 @@ session_start();
                 </div>
             </section>
             <section class="the-link">
-                <a href="#">🛒 Go to Cart <span id="item-count">count items</span></a>
+                <a href="/e-commerce-platform/cart.php">🛒 Go to Cart <span id="item-count">count items</span></a>
             </section>
             </div>
     </div>
